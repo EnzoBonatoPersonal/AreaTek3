@@ -1,0 +1,299 @@
+# USER
+user_register:
+  path: /register
+  controller: App\Controller\UserController::register
+  methods: [POST]
+user_login:
+  path: /login
+  controller: App\Controller\UserController::login
+  methods: [POST]
+user_validated:
+  path: /validated
+  controller: App\Controller\UserController::isUserValidated
+  methods: [POST]
+user_validate:
+  path: /validate
+  controller: App\Controller\UserController::validate
+  methods: [POST]
+user_send_confirmation:
+  path: /send_confirmation
+  controller: App\Controller\UserController::sendConfirmationMail
+  methods: [POST]
+user_to_send:
+  path: /to_send
+  controller: App\Controller\UserController::toSendConfirmation
+  methods: [POST]
+
+# SPOTIFY
+spotify_api_connect:
+  path: /spotify/connect
+  controller: App\Controller\SpotifyAPIController::connect
+  methods: [POST]
+spotify_api_get_access_token:
+  path: /spotify/get_access_token
+  controller: App\Controller\SpotifyAPIController::getAccessToken
+  methods: [POST]
+spotify_api_refresh_access_token:
+  path: /spotify/refresh_access_token
+  controller: App\Controller\SpotifyAPIController::refreshAccessToken
+  methods: [POST]
+spotify_api_connected:
+  path: /spotify/connected
+  controller: App\Controller\SpotifyAPIController::isConnected
+  methods: [POST]
+spotify_api_search:
+  path: /spotify/search
+  controller: App\Controller\SpotifyAPIController::search
+  methods: [GET]
+spotify_api_get_user_playlists:
+  path: /spotify/get_user_playlists
+  controller: App\Controller\SpotifyAPIController::getUserPlaylists
+  methods: [POST]
+spotify_api_action_check_music_playlist:
+  path: /spotify/action/check_music_playlist
+  controller: App\Controller\SpotifyAPIController::isMusicAddedToPlaylist
+  methods: [POST]
+spotify_api_action_check_music_playlist_parameters:
+  path: /spotify/action/check_music_playlist/get_parameters
+  controller: App\Controller\SpotifyAPIController::getIsMusicAddedToPlaylistParameters
+  methods: [POST]
+spotify_api_reaction_change_playlist_details:
+  path: /spotify/reaction/change_playlist_details
+  controller: App\Controller\SpotifyAPIController::changePlaylistDetails
+  methods: [POST]
+spotify_api_reaction_add_artist_music_to_playlist:
+  path: /spotify/reaction/add_artist_music_to_playlist
+  controller: App\Controller\SpotifyAPIController::addMusicFromArtistToPlaylist
+  methods: [POST]
+
+# DISCORD
+discord_api_connect:
+  path: /discord/connect
+  controller: App\Controller\DiscordAPIController::connect
+  methods: [POST]
+discord_api_get_access_token:
+  path: /discord/get_access_token
+  controller: App\Controller\DiscordAPIController::getAccessToken
+  methods: [POST]
+discord_api_refresh_access_token:
+  path: /discord/refresh_access_token
+  controller: App\Controller\DiscordAPIController::refreshAccessToken
+  methods: [POST]
+discord_api_check_username:
+  path: /discord/action/check_username
+  controller: App\Controller\DiscordAPIController::isUsernameChanged
+  methods: [POST]
+discord_api_check_username_get_parameters:
+  path: /discord/action/check_username/get_parameters
+  controller: App\Controller\DiscordAPIController::getIsUsernameChangedParameters
+  methods: [POST]
+discord_api_send_channel_message:
+  path: /discord/reaction/send_channel_message
+  controller: App\Controller\DiscordAPIController::sendChannelMessage
+  methods: [POST]
+discord_api_send_private:
+  path: /discord/reaction/send_private
+  controller: App\Controller\DiscordAPIController::sendPrivateMessage
+  methods: [POST]
+discord_api_get_user_channels:
+  path: /discord/get_user_channels
+  controller: App\Controller\DiscordAPIController::getUserChannels
+  methods: [POST]
+discord_api_react_message:
+  path: /discord/reaction/react_message
+  controller: App\Controller\DiscordAPIController::reactWithMessage
+  methods: [POST]
+discord_api_create_thread:
+  path: /discord/reaction/create_thread
+  controller: App\Controller\DiscordAPIController::createThreadWithoutMessage
+  methods: [POST]
+discord_api_get_thread_type:
+  path: /discord/get_thread_type
+  controller: App\Controller\DiscordAPIController::getThreadType
+  methods: [POST]
+discord_api_test:
+  path: /discord/test
+  controller: App\Controller\DiscordAPIController::test
+
+# GITHUB
+github_api_connect:
+  path: /github/connect
+  controller: App\Controller\GithubAPIController::connect
+  methods: [POST]
+github_api_get_access_token:
+  path: /github/get_access_token
+  controller: App\Controller\GithubAPIController::getAccessToken
+  methods: [POST]
+github_api_refresh_access_token:
+  path: /github/refresh_access_token
+  controller: App\Controller\GithubAPIController::refreshAccessToken
+  methods: [POST]
+github_api_connected:
+  path: /github/connected
+  controller: App\Controller\GithubAPIController::isConnected
+  methods: [POST]
+github_api_get_user_repos:
+  path: /github/get_user_repos
+  controller: App\Controller\GithubAPIController::getUserRepos
+  methods: [POST]
+github_api_get_repo_branches:
+  path: /github/get_repo_branches
+  controller: App\Controller\GithubAPIController::getRepoBranches
+  methods: [POST]
+github_api_action_check_last_commit:
+  path: /github/action/check_last_commit
+  controller: App\Controller\GithubAPIController::hasBranchNewCommit
+  methods: [POST]
+github_api_action_check_last_commit_parameters:
+  path: /github/action/check_last_commit/get_parameters
+  controller: App\Controller\GithubAPIController::getHasBranchNewCommitParameters
+  methods: [POST]
+github_api_reaction_create_issue:
+  path: /github/reaction/create_issue
+  controller: App\Controller\GithubAPIController::createIssue
+  methods: [POST]
+
+#TWITTER
+twitter_api_connect:
+  path: /twitter/connect
+  controller: App\Controller\TwitterAPIController::connect
+  methods: [POST]
+twitter_api_get_access_token:
+  path: /twitter/get_access_token
+  controller: App\Controller\TwitterAPIController::getAccessToken
+  methods: [POST]
+twitter_api_refresh_access_token:
+  path: /twitter/refresh_access_token
+  controller: App\Controller\TwitterAPIController::refreshAccessToken
+  methods: [POST]
+twitter_api_twitter_change_status:
+  path: /twitter/reaction/change_status
+  controller: App\Controller\TwitterAPIController::changeStatus
+  methods: [POST]
+twitter_api_connected:
+  path: /twitter/connected
+  controller: App\Controller\TwitterAPIController::isConnected
+  methods: [POST]
+twitter_api_send_tweet:
+  path: /twitter/reaction/send_tweet
+  controller: App\Controller\TwitterAPIController::sendTweet
+  methods: [POST]
+twitter_api_like_tweet:
+  path: /twitter/reaction/like_tweet
+  controller: App\Controller\TwitterAPIController::likeRandomTweet
+  methods: [POST]
+twitter_api_check_tweet:
+  path: /twitter/action/check_tweet
+  controller: App\Controller\TwitterAPIController::checkNewPinnedTweetOnUser
+  methods: [POST]
+twitter_api_action_check_tweet_parameters:
+  path: /twitter/action/check_tweet/get_parameters
+  controller: App\Controller\TwitterAPIController::getIsNewTweetOnUserParameters
+  methods: [POST]
+
+# GMAIL
+gmail_api_connect:
+  path: /gmail/connect
+  controller: App\Controller\GmailAPIController::connect
+  methods: [POST]
+gmail_api_get_access_token:
+  path: /gmail/get_access_token
+  controller: App\Controller\GmailAPIController::getAccessToken
+  methods: [POST]
+gmail_api_refresh_access_token:
+  path: /gmail/refresh_access_token
+  controller: App\Controller\GmailAPIController::refreshAccessToken
+  methods: [POST]
+gmail_api_connected:
+  path: /gmail/connected
+  controller: App\Controller\GmailAPIController::isConnected
+  methods: [POST]
+gmail_api_action_check_mail:
+  path: /gmail/action/check_mail
+  controller: App\Controller\GmailAPIController::hasInboxNewMail
+  methods: [POST]
+gmail_api_action_check_mail_parameters:
+  path: /gmail/action/check_mail/get_parameters
+  controller: App\Controller\GmailAPIController::getHasInboxNewMailParameters
+  methods: [POST]
+gmail_api_action_check_mail_from_somebody:
+  path: /gmail/action/check_mail_from_somebody
+  controller: App\Controller\GmailAPIController::hasInboxNewMailFromSomebody
+  methods: [POST]
+gmail_api_action_check_mail_from_somebody_parameters:
+  path: /gmail/action/check_mail_from_somebody/get_parameters
+  controller: App\Controller\GmailAPIController::getHasInboxNewMailFromSomebodyParameters
+  methods: [POST]
+gmail_api_reaction_send_mail:
+  path: /gmail/reaction/send_mail
+  controller: App\Controller\GmailAPIController::sendMail
+  methods: [POST]
+
+# TWITCH
+twitch_api_connect:
+  path: /twitch/connect
+  controller: App\Controller\TwitchAPIController::connect
+  methods: [POST]
+twitch_api_get_access_token:
+  path: /twitch/get_access_token
+  controller: App\Controller\TwitchAPIController::getAccessToken
+  methods: [POST]
+twitch_api_refresh_access_token:
+  path: /twitch/refresh_access_token
+  controller: App\Controller\TwitchAPIController::refreshAccessToken
+  methods: [POST]
+twitch_api_connected:
+  path: /twitch/connected
+  controller: App\Controller\TwitchAPIController::isConnected
+  methods: [POST]
+twitch_api_action_check_follower:
+  path: /twitch/action/check_follower
+  controller: App\Controller\TwitchAPIController::isNewUserFollowed
+  methods: [POST]
+twitch_api_action_check_follower_parameters:
+  path: /twitch/action/check_follower/get_parameters
+  controller: App\Controller\TwitchAPIController::getIsNewUserFollowedParameters
+  methods: [POST]
+twitch_api_reaction_clean_stream_chat:
+  path: /twitch/reaction/clean_stream_chat
+  controller: App\Controller\TwitchAPIController::cleanStreamChat
+  methods: [POST]
+
+# AUTOMATION
+automation_add:
+  path: /automation/add
+  controller: App\Controller\AutomationController::addAutomation
+  methods: [POST]
+automation_get:
+  path: /automation/get
+  controller: App\Controller\AutomationController::getAutomation
+  methods: [POST]
+automation_edit:
+  path: /automation/edit
+  controller: App\Controller\AutomationController::editAutomation
+  methods: [POST]
+automation_delete:
+  path: /automation/delete
+  controller: App\Controller\AutomationController::deleteAutomation
+  methods: [POST]
+
+# ACTION
+action_get_all:
+  path: /action/get_all
+  controller: App\Controller\ActionController::getAllActions
+  methods: [POST]
+
+# AUTOMATION ACTION
+automation_reaction_trigger:
+  path: /automation/reaction/trigger
+  controller: App\Controller\AutomationActionController::triggerReaction
+  methods: [POST]
+automation_reaction_do:
+  path: /automation/reaction/do
+  controller: App\Controller\AutomationActionController::doReaction
+  methods: [POST]
+
+# SERVER
+server_about_json:
+  path: /about.json
+  controller: App\Controller\ServerController::about
